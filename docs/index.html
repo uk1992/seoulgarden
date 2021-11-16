@@ -820,7 +820,7 @@
 
     <script src="assets/js/main.js"></script>
     <script>
-      function myMap() {
+      function myMap(data) {
         const myLatLng = { lat: 41.1181, lng: -85.1668};
 
         var mapProp= {
@@ -833,7 +833,8 @@
         new google.maps.Marker({
           position: myLatLng,
           map,
-          title: "Seoul Garden"
+          title: "Seoul Garden",
+          data: data,
         });
       }
       </script>
