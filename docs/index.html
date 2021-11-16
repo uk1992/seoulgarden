@@ -823,17 +823,20 @@
     <script src="assets/js/main.js"></script>
     <script>
       function myMap() {
-      const myLatLng = { lat: 41.1181, lng: -85.1668};
-      var mapProp= {
-        center: myLatLng,
-        zoom:19,
-      };
-      new google.maps.Marker({
-        position: myLatLng,
-        map,
-        title: "Seoul Garden"
-      })
-      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        const myLatLng = { lat: 41.1181, lng: -85.1668};
+        
+        var mapProp= {
+          center: myLatLng,
+          zoom:15,
+        };
+      
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        new google.maps.Marker({
+          position: myLatLng,
+          map,
+          title: "Seoul Garden"
+        });
       }
       </script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI4O6G8MLuO4ScURj6s8FF4xKrdJxRWjA&callback=myMap"></script>
