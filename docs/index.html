@@ -829,9 +829,8 @@
           <div class="col-lg-6" style="padding-bottom: 20px; ">
             <div class="col-md-10 text-center">
               <h2 class="mb-4 text-uppercase pb_letter-spacing-2">Contact Us</h2>
-              <h5 class="pb_font-18 font-weight-bold">1820 W Coliseum Blvd, Fort Wayne, IN 46808</h5>
+              <h5 class="pb_font-18 font-weight-bold" onclick="myNavFunc()">1820 W Coliseum Blvd, Fort Wayne, IN 46808</h5>
               <h5><a href="tel:2604840395">(260) 484-0395</a></h5>
-              <!-- <h5 class="pb_font-18 font-weight-bold" onclick="window.open('tel:2604840395');">(260) 484-0395</h5> -->
             </div>
             <div id="googleMap" style="width:100%;height:400px;"></div>
           </div>
@@ -895,6 +894,13 @@
           title: "Seoul Garden",
           data: data,
         });
+      }
+
+      function myNavFunc(){
+        if( (navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1))
+          window.open("maps://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=41.1181,-85.1668");
+        else
+          window.open("https://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=41.1181,-85.1668");
       }
       </script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI4O6G8MLuO4ScURj6s8FF4xKrdJxRWjA&callback=myMap"></script>
